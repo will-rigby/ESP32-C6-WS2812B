@@ -31,7 +31,7 @@ void neopixelWritePixels(uint8_t pin, uint32_t* data, uint32_t pixels){
     log_e("RGB LED driver initialization failed for GPIO%d!", pin);
     return;
   }
-  rmtSetEOT(4, 0);
+  rmtSetEOT(pin, 0);
 
   
   for(int pixel = 0; pixel < pixels; pixel++){
